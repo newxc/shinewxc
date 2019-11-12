@@ -1,0 +1,55 @@
+<!--
+ * @Author: yx
+ * @Date: 2019-11-08 19:56:05
+ * @LastEditors: yx
+ * @LastEditTime: 2019-11-12 11:19:19
+ * @Description: 首页
+ -->
+
+ <template>
+    <div>
+        <Search :cityname="this.$route.params.name"></Search>
+        <Banner></Banner>
+        <TopNav style="top:-5%;"></TopNav>
+        <Ticket></Ticket>
+        <TopList type="热销排行榜" :cityname="this.$route.params.name"></TopList>
+        <SceneryList></SceneryList>
+        <MyFooter></MyFooter>
+    </div>
+</template>
+
+<script>
+import Search from '../components/Search';
+import Banner from '../components/Banner';
+import TopNav from '../components/TopNav';
+import Ticket from '../components/Ticket';
+import TopList from '../components/TopList';
+import SceneryList from '../components/SceneryList';
+import MyFooter from '../components/MyFooter';
+
+export default {
+  name: 'Index',
+  props:['id','cityid'],
+  data() {
+      return {
+          
+      }
+  },
+  components:{
+      Search,Banner,TopNav,Ticket,SceneryList,TopList,MyFooter
+  },
+  created() {
+    //   console.log(this.cityid);
+  },
+  mounted() {
+     console.log(this.$route.params.name);
+  },
+}
+
+</script>
+
+<style>
+body{
+     background: #f6f6f6;
+}
+</style>
