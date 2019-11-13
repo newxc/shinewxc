@@ -2,7 +2,7 @@
  * @Author: yx
  * @Date: 2019-11-09 19:48:13
  * @LastEditors: yx
- * @LastEditTime: 2019-11-11 19:43:25
+ * @LastEditTime: 2019-11-13 11:21:03
  * @Description: 旅游页
  -->
 
@@ -12,8 +12,8 @@
         <Banner></Banner>
         <Trip></Trip>
         <TripNav></TripNav>
-        <SceneryList></SceneryList>
-        <MyFooter></MyFooter>
+        <List></List>
+        <!-- <MyFooter></MyFooter> -->
     </div>
 </template>
 
@@ -22,8 +22,8 @@ import MyTop from '../components/MyTop';
 import Banner from '../components/Banner';
 import Trip from '../components/Trip';
 import TripNav from '../components/TripNav';
-import SceneryList from '../components/SceneryList';
-import MyFooter from '../components/MyFooter';
+import List from '../components/List';
+// import MyFooter from '../components/MyFooter';
 
 export default {
   name: 'Tourism',
@@ -33,7 +33,7 @@ export default {
       }
   },
   components:{
-      MyTop,Banner,Trip,TripNav,SceneryList,MyFooter
+      MyTop,Banner,Trip,TripNav,List
   }
 }
 

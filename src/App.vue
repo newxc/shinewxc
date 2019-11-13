@@ -2,18 +2,23 @@
  * @Author: yx
  * @Date: 2019-11-08 18:01:56
  * @LastEditors: yx
- * @LastEditTime: 2019-11-08 22:23:18
+ * @LastEditTime: 2019-11-13 14:38:17
  * @Description: 
  -->
 <template>
   <div id="app">
     <router-view/>
+    <MyFooter></MyFooter>
   </div>
 </template>
 
 <script>
+import MyFooter from './components/MyFooter';
 export default {
-  name: 'App'
+  name: 'App',
+  components:{
+     MyFooter
+  },
 }
 </script>
 
@@ -38,5 +43,8 @@ ul,li{
 }
 a{
   text-decoration: none;
+}
+i{
+  font-style: normal;
 }
 </style>

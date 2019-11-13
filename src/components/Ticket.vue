@@ -83,7 +83,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .ticket{
 	width: 95%;
 	/* height: 1.7rem; */

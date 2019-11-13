@@ -2,7 +2,7 @@
  * @Author: yx
  * @Date: 2019-11-09 15:32:58
  * @LastEditors: yx
- * @LastEditTime: 2019-11-11 17:40:48
+ * @LastEditTime: 2019-11-13 14:36:25
  * @Description: 底部
  -->
 
@@ -86,7 +86,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .tipstop{
     width: 100%;
     height: 1.36rem;

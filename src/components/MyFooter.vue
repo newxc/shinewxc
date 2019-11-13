@@ -2,7 +2,7 @@
  * @Author: yx
  * @Date: 2019-11-09 15:32:58
  * @LastEditors: yx
- * @LastEditTime: 2019-11-11 15:54:31
+ * @LastEditTime: 2019-11-13 14:17:06
  * @Description: 底部
  -->
 
@@ -10,36 +10,13 @@
  <template>
   <footer>
        <ul>
-            <li>
-                <router-link to='/Index' v-on:click="clk" v-bind:style="col">
-                    <span class="el-icon-s-home"></span>
-                    <p>首页</p>
+           <li v-for="(item,index) in lis" :key="index"  @click="clk(index)"  >
+               <router-link  v-bind:class="{blue:isblue[index]}" :to="item.rot" >
+                   <!-- :class="isactive==index?'addclass':''" -->
+                    <span :class="item.cls"></span>
+                    <p>{{item.navName}}</p>
                 </router-link>
-            </li>
-            <li>
-                <router-link to='/Index'>
-                    <span class="el-icon-date"></span>
-                    <p>行程</p>
-                </router-link>
-            </li>
-            <li>
-                <router-link to='/Index'>
-                    <span class="el-icon-camera"></span>
-                    <p>旅拍</p>
-                </router-link>
-            </li>
-            <li>
-                <router-link to='/CustService'>
-                    <span class="el-icon-headset"></span>
-                    <p>客服</p>
-                </router-link>
-            </li>
-            <li>
-                <router-link to='/Index'>
-                    <span class="el-icon-user"></span>
-                    <p>我的</p>
-                </router-link>
-            </li>
+           </li>
         </ul>
   </footer>
 </template>
@@ -50,20 +27,58 @@ export default {
     name: 'MyFooter',
     data() {
         return {
-           col:'color:rgb(47, 123, 221)'
+        //    col:'color:rgb(47, 123, 221)',
+           lis:[
+               {
+                   "rot":"/Index",
+                   "cls":"el-icon-s-home",
+                   "navName":"首页",
+               },
+               {
+                   "rot":"/Index",
+                   "cls":"el-icon-date",
+                   "navName":"行程"
+               },
+               {
+                   "rot":"/Index",
+                   "cls":"el-icon-camera",
+                   "navName":"旅拍"
+               },
+               {
+                   "rot":"/CustService",
+                   "cls":"el-icon-headset",
+                   "navName":"客服"
+               },
+               {
+                   "rot":"/Index",
+                   "cls":"el-icon-user",
+                   "navName":"我的"
+               }
+           ],
+           isblue:[
+               true,false,false,false,false
+           ]
+        //    isactive:0
         }
     },
     methods: {
-        clk:function(){
-            // let obj = document.getElementsByTagName('li').children;
-            // console.log('obj');
+        clk(index){
+            console.log(this.isblue[index])
+            for(let i in this.isblue){
+                this.isblue[i] = false;
+            }
             
+            this.isblue[index] = true;
+            console.log(this.isblue[index])
         }
+    },
+    created() {
+        
     },
 }
 </script>
 
-<style>
+<style scoped>
 footer{
   margin: 0 auto;
   width:100%;
@@ -72,7 +87,14 @@ footer{
   position: fixed;
   bottom: 0;
   border-top: 1px solid #ccc;
+  z-index: 20;
 }
+.blue{
+    color:rgb(47, 123, 221);
+}
+/* .black{
+    color: black;
+} */
 ul{
     display: flex;
     justify-content: space-around;

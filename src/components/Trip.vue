@@ -2,7 +2,7 @@
  * @Author: yx
  * @Date: 2019-11-11 09:16:04
  * @LastEditors: yx
- * @LastEditTime: 2019-11-11 17:05:40
+ * @LastEditTime: 2019-11-12 17:25:29
  * @Description: 行程
  -->
 
@@ -14,17 +14,19 @@
            <span>填写目的地/关键字</span>
        </div>
         <div class="trCon">
+            <select>
+                <option value="出行天数">出行天数(选填)</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
             <el-date-picker
                 class="myData"
                 v-model="value1"
                 type="date"
-                placeholder="出发日期(选填)">
-            </el-date-picker>
-            <el-date-picker
-                class="myData"
-                v-model="value1"
-                type="date"
-                placeholder="到达日期(选填)">
+                placeholder="出行日期(选填)">
             </el-date-picker>
             <!-- <span>出发日期(选填)</span> -->
             <!-- <span>到达日期(选填)</span><br> -->
@@ -102,6 +104,13 @@ export default {
 .trip .trCon .myData{
     width: 48%;
     border: 0;
+}
+.trCon select{
+    width: 45%;
+    outline: none;
+    font-size: 0.14rem;
+    color: #bbb;
+    text-indent: 0.18rem;
 }
 .trip input{
     border-radius: 0.04rem;

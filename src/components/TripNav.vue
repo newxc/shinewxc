@@ -2,7 +2,7 @@
  * @Author: yx
  * @Date: 2019-11-08 22:31:20
  * @LastEditors: yx
- * @LastEditTime: 2019-11-11 14:16:53
+ * @LastEditTime: 2019-11-13 14:36:46
  * @Description: 
  -->
 
@@ -88,7 +88,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .tripNav{
 	width: 95%;
 	overflow: hidden;

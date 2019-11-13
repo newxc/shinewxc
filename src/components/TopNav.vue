@@ -2,7 +2,7 @@
  * @Author: yx
  * @Date: 2019-11-08 22:18:39
  * @LastEditors: yx
- * @LastEditTime: 2019-11-11 09:50:54
+ * @LastEditTime: 2019-11-13 14:36:37
  * @Description: 顶部导航
  -->
 
@@ -42,7 +42,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .topNav{
 	width: 95%;
 	height: 0.5rem;

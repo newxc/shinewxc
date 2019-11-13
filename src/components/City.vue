@@ -2,7 +2,7 @@
  * @Author: yx
  * @Date: 2019-11-11 20:11:05
  * @LastEditors: yx
- * @LastEditTime: 2019-11-12 10:40:30
+ * @LastEditTime: 2019-11-13 09:57:34
  * @Description: 城市
  -->
 
@@ -49,7 +49,7 @@ export default {
     }
   },
   created() {
-      axios.get('http://localhost:3000/citys')
+      axios.get('/api/citys')
       .then(res=>{
         //   console.log(this.id)
           this.citys = res.data;

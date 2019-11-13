@@ -2,7 +2,7 @@
  * @Author: yx
  * @Date: 2019-11-08 19:56:05
  * @LastEditors: yx
- * @LastEditTime: 2019-11-12 11:19:19
+ * @LastEditTime: 2019-11-13 11:20:44
  * @Description: 首页
  -->
 
@@ -14,7 +14,7 @@
         <Ticket></Ticket>
         <TopList type="热销排行榜" :cityname="this.$route.params.name"></TopList>
         <SceneryList></SceneryList>
-        <MyFooter></MyFooter>
+        <!-- <MyFooter></MyFooter> -->
     </div>
 </template>
 
@@ -25,7 +25,7 @@ import TopNav from '../components/TopNav';
 import Ticket from '../components/Ticket';
 import TopList from '../components/TopList';
 import SceneryList from '../components/SceneryList';
-import MyFooter from '../components/MyFooter';
+// import MyFooter from '../components/MyFooter';
 
 export default {
   name: 'Index',
@@ -36,7 +36,7 @@ export default {
       }
   },
   components:{
-      Search,Banner,TopNav,Ticket,SceneryList,TopList,MyFooter
+      Search,Banner,TopNav,Ticket,SceneryList,TopList
   },
   created() {
     //   console.log(this.cityid);

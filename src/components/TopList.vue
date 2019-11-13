@@ -2,7 +2,7 @@
  * @Author: yx
  * @Date: 2019-11-09 10:23:20
  * @LastEditors: yx
- * @LastEditTime: 2019-11-12 14:04:55
+ * @LastEditTime: 2019-11-13 09:58:29
  * @Description: 排行榜
  -->
 
@@ -19,7 +19,7 @@
               <span>热门景点</span>
               <div class="topBoxR">
                   <p>{{item.one1}}</p>
-                  <span>票价：￥{{item.price}}</span>
+                  <span>票价：￥{{item.price}}起</span>
                   <span>销量：<b>{{item.bycount}}</b></span>
               </div>
           </div>
@@ -44,7 +44,7 @@ export default {
     },
     created() {
         console.log(this.cityname);
-        fetch('http://localhost:3000/citys')
+        fetch('/api/citys')
         .then(res=>{
             return res.json();
         })
@@ -86,7 +86,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .topList{
     width: 95%;
     /* overflow: hidden; */

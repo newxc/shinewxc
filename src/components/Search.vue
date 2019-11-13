@@ -2,13 +2,13 @@
  * @Author: yx
  * @Date: 2019-11-08 20:00:17
  * @LastEditors: yx
- * @LastEditTime: 2019-11-12 14:06:59
+ * @LastEditTime: 2019-11-13 14:36:13
  * @Description: 搜索栏
  -->
 
  <template>
   <div class="box" >
-    <router-link to="/Positioning"><span id="city">{{cityname}} </span>&nbsp;∨</router-link>
+    <router-link to="/Positioning"><span id="city">{{cityname}} </span><span class="el-icon-arrow-down"></span></router-link>
     <input type="text" placeholder="陕西历史博物馆门票">
 	<span class="el-icon-microphone"></span>
     <router-link to="/CustService"><span class="el-icon-chat-dot-round"></span></router-link>
@@ -42,6 +42,7 @@ export default {
 //       })
 //   },
   mounted() {
+	//   console.log(cityname);
 		if(this.$route.params.name==null){
             return document.getElementById("city").innerHTML='西安';
         }else{
@@ -55,7 +56,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .box{
     width: 100%;
 	height: 0.24rem;
@@ -86,6 +87,10 @@ export default {
 }
 .box .el-icon-microphone{
 	color: black;
+}
+.el-icon-arrow-down{
+	margin-top: 0.03rem;
+	margin-right: 0.02rem;
 }
 .box :nth-child(3){
 	font-size: 0.18rem;
