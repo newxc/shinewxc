@@ -2,7 +2,7 @@
  * @Author: yx
  * @Date: 2019-11-09 19:48:13
  * @LastEditors: yx
- * @LastEditTime: 2019-11-13 11:21:03
+ * @LastEditTime: 2019-11-15 11:08:38
  * @Description: 旅游页
  -->
 
@@ -23,7 +23,7 @@ import Banner from '../components/Banner';
 import Trip from '../components/Trip';
 import TripNav from '../components/TripNav';
 import List from '../components/List';
-// import MyFooter from '../components/MyFooter';
+import MyFooter from '../components/MyFooter';
 
 export default {
   name: 'Tourism',
@@ -33,7 +33,7 @@ export default {
       }
   },
   components:{
-      MyTop,Banner,Trip,TripNav,List
+      MyTop,Banner,Trip,TripNav,List,MyFooter
   }
 }
 
